@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <title>Control-TTS : Zero-shot Audio-guided Speaker-specific and Style-controllable Text to Speech Synthesis</title>
+    <title>Control-TTS: Timbre and Style Controllable Text to Speech Synthesis with Reference Speech Examples</title>
     <style>
         .text-center {
             text-align: center;
@@ -31,7 +31,12 @@
                 </div>
                 <p>
                     <b>Abstract.</b> 
-                    empty.
+                    Text to Speech Synthesis (TTS) is essential for cross-modal human-computer interaction, widely applied in smart homes, voice assistants, and mobile devices. 
+                    In recent years, user demands for TTS have extended beyond generating natural and fluent speech to include personalized customization of voice timbre and style, presenting new challenges for speech synthesis systems.
+Current research progress in this area primarily involves zero-shot speech synthesis and style-controllable speech synthesis. However, zero-shot synthesis cannot control speech style, while traditional style-controllable synthesis lacks the ability to specify speaker timbre. As a result, each approach presents limitations, struggling to balance style control with speaker timbre specification.
+To address this issue, we identified a novel task: Controllable Speech Synthesis with Reference Speech Examples, enabling the direct control of speaker timbre and speaking style through two reference speech samples to generate new timbre-style combinations.
+To tackle this new task, we propose the Control-TTS model. Control-TTS can decouple and recombine the speaker timbre and speaking style from the reference speech examples, synthesizing novel combinations of timbre and style, thereby enhancing the diversity of synthesized speech.
+Our experiments on the VccmDataset demonstrate that Control-TTS exhibits comparable or state-of-the-art performance in terms of Naturalness Mean Opinion Score (NMOS), Word Error Rate (WER), speaker similarity, and style similarity.
                 </p>
                 <p>
                     <b>Author.</b> 
@@ -48,10 +53,11 @@
 <div class="container">
     <h3 id="synthesized1">1. Voice Clone for Any Texts</h3>
     <p> 
-        text_1 = "'Choose wisely,'the well’s voice murmured, water rippling with visions of kingdoms saved and hearts broken. "
-        text_2 =  "Wanna grab coffee later?"
-        text_3 =  "I swear, if one more influencer tells me to ‘manifest abundance’ while I’m elbow-deep in student debt, I’m deleting Instagram."
-
+        <ul>
+        <li>text_1 = "'Choose wisely,'the well’s voice murmured, water rippling with visions of kingdoms saved and hearts broken. "</li>
+        <li>text_2 =  "Wanna grab coffee later?"</li>
+        <li> text_3 =  "I swear, if one more influencer tells me to ‘manifest abundance’ while I’m elbow-deep in student debt, I’m deleting Instagram."
+    </ul>
     </p>
     <table class="table">
         <thead>
